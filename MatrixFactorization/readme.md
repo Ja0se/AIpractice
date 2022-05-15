@@ -2,6 +2,6 @@
 
 # ImgProcessing - Display, load, write etc..
 
-# image_il - main
+# image_io - main
 
 ## Lena_numc - png and csv(pixels imformation)
