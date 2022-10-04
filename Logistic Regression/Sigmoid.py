@@ -25,10 +25,3 @@ class sigmoid_regressor:
 
   def Epoch(self):
     return self.fit_epoch
-  
-if __name__=='__main__':
-  curve=sigmoid_regressor()
-  learning_rate=0.01
-  epochs=10000
-  curve.fit(epochs,learning_rate,pred_idx,Y_pred)
-  a,b=curve.pred()
