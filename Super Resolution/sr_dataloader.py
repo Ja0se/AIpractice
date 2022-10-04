@@ -5,8 +5,8 @@ from torch.utils.data import Dataset
 
 class TrainDataset(Dataset):
     def __init__(self):
-        inputImgFolder = "./SR_dataset/T91_ILR"
-        labelImgFolder = "./SR_dataset/T91_HR"
+        inputImgFolder = ".\\SR_dataset\\T91_ILR"
+        labelImgFolder = ".\\SR_dataset\\T91_HR"
         patchSize = 32
 
         inputImgPaths = glob("%s/*.png" % (inputImgFolder))
@@ -51,11 +51,11 @@ class TrainDataset(Dataset):
 
 class TestDataset(Dataset):
     def __init__(self):
-        inputImgFolder = "./SR_dataset/Set5_ILR"
-        labelImgFolder = "./SR_dataset/Set5_HR"
+        inputImgFolder = ".\\SR_dataset\\Set5_ILR"
+        labelImgFolder = ".\\SR_dataset\\Set5_HR"
 
-        inputImgPaths = glob("%s/*.bmp" % (inputImgFolder))
-        labelImgPaths = glob("%s/*.bmp" % (labelImgFolder))
+        inputImgPaths = glob("%s\\*.bmp" % (inputImgFolder))
+        labelImgPaths = glob("%s\\*.bmp" % (labelImgFolder))
         inputImgPaths.sort()
         labelImgPaths.sort()
 

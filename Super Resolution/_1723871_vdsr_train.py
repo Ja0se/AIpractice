@@ -53,7 +53,9 @@ for epoch in range(training_epochs):
 
     for data in train_dataloader:
         inputImg,labelImg=data
-
+        inputImg=inputImg.to('cuda')
+        labelImg=labelImg.to('cuda')
+        
         predImg=model(inputImg)
 
         loss=loss_function(predImg,labelImg)

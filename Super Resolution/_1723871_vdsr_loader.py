@@ -20,7 +20,9 @@ class TrainDataset(Dataset):
         for idx in range(len(inputImgPaths)):
             inputImg = cv2.imread(inputImgPaths[idx], cv2.IMREAD_GRAYSCALE)
             labelImg = cv2.imread(labelImgPaths[idx], cv2.IMREAD_GRAYSCALE)
-
+            #
+            # inputImg = cv2.resize(inputImg,dsize=(512,512))
+            # labelImg = cv2.resize(labelImg,dsize=(512,512))
             inputImg=np.array(inputImg,dtype=np.float32)/255.
             labelImg=np.array(labelImg,dtype=np.float32)/255.
 
@@ -69,7 +71,8 @@ class TestDataset(Dataset):
         for idx in range(len(inputImgPaths)):
             inputImg = cv2.imread(inputImgPaths[idx], cv2.IMREAD_GRAYSCALE)
             labelImg = cv2.imread(labelImgPaths[idx], cv2.IMREAD_GRAYSCALE)
-
+            # inputImg = cv2.resize(inputImg,dsize=(512,512))
+            # labelImg = cv2.resize(labelImg,dsize=(512,512))
             inputImg = np.array(inputImg, dtype=np.float32) / 255.
             labelImg = np.array(labelImg, dtype=np.float32) / 255.
 
